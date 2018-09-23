@@ -1,0 +1,36 @@
+---
+title: "MA615 Homework2"
+author: "SHIYU ZHANG"
+date: "September 16, 2018"
+output:
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+suppressMessages(library("tidyverse"))
+```
+
+
+```{r }
+library(tidyverse)
+data("LakeHuron")
+LakeHuron <- data.frame("year" = 1875:1972, "level" = LakeHuron)
+
+```
+
+
+```{r }
+
+ggplot(data = LakeHuron)+geom_point(mapping = aes(x = year, y = level))
+
+ggplot(data = LakeHuron)+geom_line(mapping = aes(x = year, y = level))
+
+ggplot(data = LakeHuron)+
+  geom_point(mapping = aes(x = year,y = level))+
+  geom_line(mapping = aes(x = year,y = level))
+```
+
+
+
+
